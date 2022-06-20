@@ -1,6 +1,6 @@
 Feature: Credit, Debit, Transfer
   Background:
-    Given create user A with 01 and "Use A" and create user B with 02 and "User B"
+    Given create user A with "01" and "Use A" and create user B with "02" and "User B"
     And user A: credit 200 USD
     And user B: credit 300 USD
 

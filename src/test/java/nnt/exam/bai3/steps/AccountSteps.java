@@ -5,15 +5,14 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.en_old.Ac;
 import nnt.exam.bai3.Account;
 import org.junit.jupiter.api.Assertions;
 
 public class AccountSteps {
     private Account accountA, accountB, tmpAccount;
 
-    @Given("create user A with {int} and {string} and create user B with {int} and {string}")
-    public void createUserAWithAndAndCreateUserBWith(int idA, String userA, int idB, String userB) {
+    @Given("create user A with {string} and {string} and create user B with {string} and {string}")
+    public void createUserAWithAndAndCreateUserBWith(String idA, String userA, String idB, String userB) {
         accountA = new Account(idA, userA);
         accountB = new Account(idB, userB);
     }

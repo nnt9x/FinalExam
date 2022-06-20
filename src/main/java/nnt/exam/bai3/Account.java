@@ -1,22 +1,22 @@
 package nnt.exam.bai3;
 
 public class Account {
-    private int id;
+    private String id;
     private String name;
     private int balance = 0;
 
-    public Account(int id, String name) {
+    public Account(String id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public Account(int id, String name, int balance) {
+    public Account(String id, String name, int balance) {
         this.id = id;
         this.name = name;
         this.balance = balance;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
@@ -40,7 +40,7 @@ public class Account {
         if (amount <= 0) {
             throw new RuntimeException("amount must be greater than zero");
         }
-        if (balance <= amount) {
+        if (balance < amount) {
             System.out.println("Amount exceeded balance");
         } else {
             balance = balance - amount;
@@ -52,7 +52,7 @@ public class Account {
         if (amount <= 0) {
             throw new RuntimeException("amount must be greater than zero");
         }
-        if (balance <= amount) {
+        if (balance < amount) {
             System.out.println("Amount exceeded balance");
         } else {
             this.debit(amount);
